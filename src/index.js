@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const newImg = e.target.image.value
       const newNetwork = e.target.network.value
       document.querySelector('.add-toon-form').reset() 
-    
+
+
       //The POST Req.
         fetch(toonDB, {
           method: "POST",
