@@ -133,7 +133,7 @@ logoHome.addEventListener('click', () => returnToLeaderboard())
 cnButton.addEventListener('click', () => filterToonsByNetwork("Cartoon Network"));
 nickelodeonButton.addEventListener('click', () => filterToonsByNetwork("Nickelodeon"));
 disneyButton.addEventListener('click', () => filterToonsByNetwork("Disney"));
-otherButton.addEventListener('click', () => filterToonsByNetwork("Other"));
+// otherButton.addEventListener('click', () => filterToonsByNetwork("Other"));
 
 function returnToLeaderboard(likes) {
   const toonCollection = document.getElementById('toon-collection');
@@ -169,6 +169,7 @@ function filterToonsByNetwork(network) {
 
 // fetch data from render json server
 function renderToonsOnRender(){
+  console.log("inside render toons on render function")
   fetch("http://toon-site.onrender.com:3000/toons")
   .then(response => response.json())
   .then(data => {
@@ -176,5 +177,7 @@ function renderToonsOnRender(){
     console.log(data)
   })
 }
+
+
 
 renderToonsOnRender()
