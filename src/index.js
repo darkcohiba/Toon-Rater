@@ -167,9 +167,13 @@ function filterToonsByNetwork(network) {
 
 
 // fetch data from render json server
-fetch("http://toon-site.onrender.com:3000/toons")
-.then(response => response.json())
-.then(data => {
-  console.log("inside render fetch")
-  console.log(data)
-})
+function renderToonsOnRender(){
+  fetch("http://toon-site.onrender.com:3000/toons")
+  .then(response => response.json())
+  .then(data => {
+    console.log("inside render fetch")
+    console.log(data)
+  })
+}
+
+renderToonsOnRender()
