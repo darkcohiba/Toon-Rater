@@ -164,3 +164,9 @@ function filterToonsByNetwork(network) {
       filteredToons.forEach(toon => renderCard(toon));
     });
 };
+
+
+// fetch data from render json server
+fetch("https://toon-site.onrender.com:3000/toons")
+.then(response => response.json())
+.then(data => console.log(data))
